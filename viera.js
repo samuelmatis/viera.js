@@ -1,4 +1,4 @@
-// Viera.js 0.1.1
+// Viera.js 0.1.2
 // (c) 2014 Samuel Matis
 // Viera.js may be freely distributed or modified under the MIT license.
 

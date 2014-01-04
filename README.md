@@ -16,7 +16,7 @@ Node.js library for controlling Panasonic Viera TV.
 2. Start sending commands! (commands listed in ``` codes.txt ```)
 
 	```js
-	tv.sendCommand(menu);
+	tv.sendCommand("menu");
 
 	tv.setVolume(20);
 	
