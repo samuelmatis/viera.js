@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Viera.js by samuelmatis</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Viera.js</h1>
+        <p>Node.js library for controlling Panasonic Viera TV.</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/samuelmatis/viera.js" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/samuelmatis/viera.js/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/samuelmatis/viera.js/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a name="vierajs" class="anchor" href="#vierajs"><span class="octicon octicon-link"></span></a>viera.js</h1>
+
+<p>Node.js library for controlling Panasonic Viera TV.</p>
+
+<h2>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h2>
+
+<ol>
+<li>
+<p>Require the module and create an instance of module:</p>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">Viera</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./viera'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">tv</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Viera</span><span class="p">(</span><span class="s1">'&lt;ip_address&gt;'</span><span class="p">);</span>
+</pre></div>
+</li>
+<li>
+<p>Start sending commands! (commands listed in <code>codes.txt</code>)</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">tv</span><span class="p">.</span><span class="nx">sendCommand</span><span class="p">(</span><span class="nx">menu</span><span class="p">);</span>
+
+<span class="nx">tv</span><span class="p">.</span><span class="nx">setVolume</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+
+<span class="nx">tv</span><span class="p">.</span><span class="nx">setMute</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="nx">tv</span><span class="p">.</span><span class="nx">getVolume</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</li>
+</ol><p>You can also chain multiple methods</p>
+
+<div class="highlight highlight-js"><pre>  <span class="nx">tv</span><span class="p">.</span><span class="nx">sendCommand</span><span class="p">(</span><span class="s2">"apps"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">sendCommand</span><span class="p">(</span><span class="s2">"down"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">sendCommand</span><span class="p">(</span><span class="s2">"enter"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">setVolume</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+</pre></div>
+
+<p>You can see an example in <code>example.js</code></p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2014 Samuel Matis</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/samuelmatis">samuelmatis</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
