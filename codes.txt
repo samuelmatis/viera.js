@@ -1,0 +1,79 @@
+CH_DOWN     - channel down
+CH_UP       - channel up
+VOLUP       - volume up
+VOLDOWN     - volume down
+POWER       - Power off
+MUTE        - mute
+TV          - TV
+CHG_INPUT   - AV
+HOME        - Home screen
+APPS        - Apps
+GUIDE       - Guide
+RED         - red
+GREEN       - green
+YELLOW      - yellow
+BLUE        - blue
+VTOOLS      - VIERA tools
+CANCEL      - Cancel / Exit
+SUBMENU     - Option
+RETURN      - Return
+ENTER       - Control Center click / enter
+RIGHT       - Control RIGHT
+LEFT        - Control LEFT
+UP          - Control UP
+DOWN        - Control DOWN
+3D          - 3D button
+SD_CARD     - SD-card
+DISP_MODE   - Display mode / Aspect ratio
+MENU        - Menu
+INTERNET    - VIERA connect
+VIERA_LINK  - VIERA link
+EPG         - Guide / EPG
+TEXT        - Text / TTV
+STTL        - STTL / Subtitles
+INFO        - info
+INDEX       - TTV index
+HOLD        - TTV hold / image freeze
+R_TUNE      - Last view
+
+REW         - rewind
+PLAY        - play
+FF          - fast forward
+SKIP_PREV   - skip previous
+PAUSE       - pause
+SKIP_NEXT   - skip next
+STOP        - stop
+REC         - record
+
+numeric buttons
+D1 D2 D3 D4 D5 D6 D7 D8 D9 D0
+
+P_NR        - P-NR (Noise reduction)
+OFFTIMER    - off timer
+R_TUNE      - Seems to do the same as INFO
+
+others (depends on type of your TV)
+CHG_NETWORK
+CC
+SAP
+RECLIST
+DRIVE
+DATA
+BD
+FAVORITE
+DIGA_CTL
+VOD
+ECO
+GAME
+EZ_SYNC
+PICTAI
+MPX
+SPLIT
+SWAP
+R_SCREEN
+30S_SKIP
+PROG
+TV_MUTE_ON
+TV_MUTE_OFF
+DMS_CH_UP
+DMS_CH_DOWN
