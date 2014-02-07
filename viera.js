@@ -14,7 +14,9 @@
      */
     var Viera = function(ipAddress) {
         // Check if ipAddress is valid IP address
-        if(/^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/.test(ipAddress)) {
+	    var ipRegExp = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/;
+
+        if(ipRegExp.test(ipAddress)) {
             this.ipAddress = ipAddress;
         } else {
             new TypeError('You entered invalid IP address!');
