@@ -1,5 +1,4 @@
 var Viera = require('./viera');
-var readline = require('readline');
 
 // create instance of module
 var tv = new Viera('<ip-address>');
