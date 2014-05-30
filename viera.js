@@ -1,4 +1,4 @@
-// Viera.js 0.1.3
+// Viera.js 0.1.4
 // (c) 2014 Samuel Matis
 // Viera.js may be freely distributed or modified under the MIT license.
 
@@ -14,12 +14,12 @@
      */
     var Viera = function(ipAddress) {
         // Check if ipAddress is valid IP address
-	    var ipRegExp = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/;
+        var ipRegExp = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/;
 
         if(ipRegExp.test(ipAddress)) {
             this.ipAddress = ipAddress;
         } else {
-            new TypeError('You entered invalid IP address!');
+            throw new TypeError('You entered invalid IP address!');
         }
     };
 
@@ -33,10 +33,10 @@
      */
      Viera.prototype.sendRequest = function(type, action, command, options) {
         var url, urn;
-        if(type == 'command') {
+        if(type === 'command') {
             url = '/nrc/control_0';
             urn = 'panasonic-com:service:p00NetworkControl:1';
-        } else if (type == 'render') {
+        } else if (type === 'render') {
             url = '/dmr/control_0';
             urn = 'schemas-upnp-org:service:RenderingControl:1';
         }
@@ -64,7 +64,7 @@
 
         var self = this;
         if(options !== undefined) {
-            self.callback = options['callback'];
+            self.callback = options.callback;
         }
 
         var req = http.request(postRequest, function(res) {
@@ -121,7 +121,7 @@
      */
     Viera.prototype.setVolume = function(volume) {
         if (volume < 0 || volume > 100) {
-            new Error("Volume must be in range from 0 to 100");
+            throw new Error("Volume must be in range from 0 to 100");
         }
 
         this.sendRequest('render', 'SetVolume', '<InstanceID>0</InstanceID><Channel>Master</Channel><DesiredVolume>' + volume + '</DesiredVolume>');
@@ -143,7 +143,7 @@
                 var regex = /<CurrentMute>([0-1])<\/CurrentMute>/gm;
                 var match = regex.exec(data);
                 if(match !== null) {
-                    var mute = (match[1] == '1');
+                    var mute = (match[1] === '1');
                     self.muteCallback(mute);
                 }
             }
