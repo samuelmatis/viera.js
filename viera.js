@@ -65,6 +65,8 @@
         var self = this;
         if(options !== undefined) {
             self.callback = options.callback;
+        } else {
+            self.callback = function () {};
         }
 
         var req = http.request(postRequest, function(res) {
