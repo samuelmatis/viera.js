@@ -1,25 +1,25 @@
 {
-    "name": "viera.js",
-    "version": "0.1.3",
-    "description": "Node.js library for controlling Panasonic Viera TV.",
-    "author":{
-        "name": "Samuel Matis",
-        "email": "samuel@matiss.sk",
-        "url": "http://www.matiss.sk"
-    },
-    "main": "./viera",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/samuelmatis/viera.js.git"
-    },
-    "keywords": [
-        "tv",
-        "panasonic",
-        "viera",
-        "control"
-    ],
-    "license": "MIT",
-    "engines": {
-        "node": ">=0.4.0"
-    }
+  "name": "viera.js",
+  "version": "0.1.5",
+  "description": "Node.js library for controlling Panasonic Viera TV.",
+  "author": {
+    "name": "Samuel Matis",
+    "email": "samuel@matiss.sk",
+    "url": "http://www.matiss.sk"
+  },
+  "main": "./viera",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/samuelmatis/viera.js.git"
+  },
+  "keywords": [
+    "tv",
+    "panasonic",
+    "viera",
+    "control"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.4.0"
+  }
 }
